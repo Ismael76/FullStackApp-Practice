@@ -27,6 +27,6 @@ services:
     environment: 
       - POSTGRES_DB=drinks
       - POSTGRES_USER=ismael
-      - POSTGRES_PASSWORD=drinskpass
+      - POSTGRES_PASSWORD=drinkspass
 volumes:
   dbdata:

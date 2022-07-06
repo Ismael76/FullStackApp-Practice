@@ -7,9 +7,10 @@ class Drink {
   }
 
   static getAll() {
+    console.log("HEJFJFJKDSJ");
     return new Promise(async (resolve, reject) => {
       try {
-        const drinkData = await pool.query(`SELECT * FROM drinks;`);
+        const drinkData = await pool.query("SELECT * FROM drinks;");
         const drinks = drinkData.rows.map((drink) => new Drink(drink));
         resolve(drinks);
       } catch (err) {
@@ -18,3 +19,5 @@ class Drink {
     });
   }
 }
+
+module.exports = Drink;
