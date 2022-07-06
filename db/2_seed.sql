@@ -5,3 +5,8 @@ VALUES
     ('Fanta Fruit Twist', 'Fanta' ),
     ('Diet Coke', 'Coke' )
 
+INSERT INTO company (name) 
+VALUES
+    ('Coca Cola'),
+    ('Suntory'),
+    ('Britvic')

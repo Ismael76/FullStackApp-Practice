@@ -6,8 +6,22 @@ class Drink {
     this.brand = data.brand;
   }
 
+  static getCompany(name) {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const drinkData = await pool.query(
+          "SELECT company.name, drinks.name FROM drinks INNER JOIN company ON drinks.id = company.id WHERE company.name = $1;",
+          [name]
+        );
+
+        resolve(drinkData.rows[0]);
+      } catch (err) {
+        reject(`Error`);
+      }
+    });
+  }
+
   static getAll() {
-    console.log("HEJFJFJKDSJ");
     return new Promise(async (resolve, reject) => {
       try {
         const drinkData = await pool.query("SELECT * FROM drinks;");

@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3'
 services:
   server:
     image: node:12.18.4
@@ -8,7 +8,7 @@ services:
     environment: 
       - PGUSER=ismael
       - PGHOST=db
-      - PGPASSWORD=drinkspass
+      - PGPASSWORD=drinks
       - PGDATABASE=drinks
       - PGPORT=5432
     depends_on:
@@ -27,6 +27,6 @@ services:
     environment: 
       - POSTGRES_DB=drinks
       - POSTGRES_USER=ismael
-      - POSTGRES_PASSWORD=drinkspass
+      - POSTGRES_PASSWORD=drinks
 volumes:
   dbdata:
